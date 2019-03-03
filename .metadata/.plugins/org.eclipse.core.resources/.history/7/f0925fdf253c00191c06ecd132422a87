@@ -1,0 +1,27 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"  %>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>contact画面</title>
+</head>
+<body>
+
+<div id="aa"></div>
+<table>
+	<tr>
+		<td>ニックネーム</td>
+		<td><s:property value="session.nick_name" /></td>
+	</tr>
+	<tr>
+		<td>コメント</td>
+		<td><s:property value="session.comment" /></td>
+	<tr>
+		<td><input type="button" value="送信"></td>
+	</tr>
+</table>
+
+
+</body>
+</html>

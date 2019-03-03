@@ -1,0 +1,57 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags"  %>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>contact画面</title>
+
+	 <style type="text/css">
+	#main{
+		margin: 0;
+		padding: 0;
+		line-height: 1.6;
+		letter-spacing: 2px;
+		font-family: Verdana, Helvetica, sans-serif;
+		font-size: 15px;
+		text-align: center;
+	}
+
+	table.collapse{
+		border-collapse: collapse;
+		whidth: 1200px;
+
+	}
+
+	table td{
+		text-align: center;
+		margin: 0;
+		border: solid 1px;
+		cellspacing: 50px;
+	}
+
+	submit{
+	}
+
+
+	 </style>
+</head>
+<body>
+	<div id="main">
+		<table class="collapse">
+			<tr>
+				<td>ニックネーム</td>
+				<td><input type="text" name="nick_name" value="" /></td>
+			</tr>
+			<tr>
+				<td>コメント</td>
+				<td><textarea name="comment" rows="8" cols="50" placeholder="ご自由にご記入ください。" ></textarea></td>
+			</tr>
+		</table>
+
+			<input type="submit" value="送信">
+	</div>
+
+
+</body>
+</html>

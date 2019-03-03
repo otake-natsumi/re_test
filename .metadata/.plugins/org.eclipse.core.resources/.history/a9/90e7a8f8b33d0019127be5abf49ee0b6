@@ -1,0 +1,8 @@
+drop database if exists comment;
+create database comment;
+use comment;
+
+create table comment_list(
+	nick_name varchar(255),
+	comment varchar(255)
+);
