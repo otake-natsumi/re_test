@@ -1,1 +1,8 @@
 1551600622590	型名 'Comment' を変更します
+1551697403048	型名 'ContactConfirm' を変更します
+1551699958478	型名 'CommentAction' を変更します
+1551700823045	パッケージ名 'com.corva.illustsite.action' を変更します
+1551700950915	パッケージ名 'com.corva.illustsite.dao' を変更します
+1551700954842	パッケージ名 'com.corva.illustsite.util' を変更します
+1551700965491	パッケージ名 'com.corva.illustsite.dto' を変更します
+1551702555562	'ContactComplete.jsp' を 'WebContent' に移動

@@ -8,7 +8,7 @@ use comment;
 drop table if exists comment_list;
 
 create table comment_list(
-	nick_name varchar(255),
+	nick_name varchar(16),
 	comment varchar(255),
 	update_date datetime
 );

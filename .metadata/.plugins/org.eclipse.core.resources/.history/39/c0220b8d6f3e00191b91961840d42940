@@ -1,0 +1,9 @@
+package com.corva.illustsite.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import com.corva.illustsite.util.DBConnector;
+public class ContactCompleteActionDAO {
+
+}

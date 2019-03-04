@@ -1,0 +1,5 @@
+package com.corva.illustsite.action;
+
+public class ContactConfirm {
+
+}

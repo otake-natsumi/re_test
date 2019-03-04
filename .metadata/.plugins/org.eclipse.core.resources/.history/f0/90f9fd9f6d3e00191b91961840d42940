@@ -1,0 +1,10 @@
+package com.corva.illustsite.action;
+
+import java.sql.Connection;
+import java.sal.PreparedStatement;
+import java.sql.SQLException;
+import com.corva.illustsite.util.DBCOnnector;
+
+public class ContactCompleteAction {
+
+}

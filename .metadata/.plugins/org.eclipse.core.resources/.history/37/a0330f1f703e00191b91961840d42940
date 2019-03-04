@@ -1,0 +1,16 @@
+package com.corva.illustsite.dao;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.SQLException;
+import com.corva.illustsite.util.DBConnector;
+
+public class ContactCompleteActionDAO {
+	private DBConnector dbConnector = new DBConnector();
+	private Connection connection = dbConnector.getConnection();
+	private String sql = "INSERT INTO comment_list(nick_name, comment, update_date) VALUES(?,?,?)";
+
+	public void createComment(String nick_name,String comment) throws SQLException{
+
+	}
+}

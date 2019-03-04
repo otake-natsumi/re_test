@@ -1,0 +1,5 @@
+package com.corva.illustsite.dao;
+
+public class ContactCompleteActionDAO {
+
+}

@@ -12,3 +12,4 @@
 2019-03-03 23:30:44,046 [main] INFO  org.eclipse.jetty.server.Server - Started @5151198ms
 2019-03-04 00:10:24,186 [Framework stop] INFO  o.e.jetty.server.ServerConnector - Stopped ServerConnector@42081c0d{HTTP/1.1}{0.0.0.0:0}
 2019-03-04 00:10:24,255 [Framework stop] INFO  o.e.j.server.handler.ContextHandler - Stopped o.e.j.s.ServletContextHandler@1aca2eb0{/wse,null,UNAVAILABLE}
+2019-03-04 19:24:56,983 [main] INFO  c.g.t.t.d.PublishedGradleVersions - Gradle version information cache file is out-of-date. Remote download required.

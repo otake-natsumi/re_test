@@ -1,0 +1,20 @@
+package com.corva.illustsite.action;
+
+import java.sql.SQLException;
+import java.util.Map;
+import org.apache.struts2.interceptor.SessionAware;
+import com.opensymphony.xwork2.ActionSupport;
+import com.corva.illustsite.dao.ContactCompleteActionDAO;
+
+public class ContactCompleteAction extends ActionSupport implements SessionAware{
+
+	private String nick_name;
+	private String comment;
+	public Map<String, Object> session;
+	private ContactCompleteActionDAO contactCompleteActionDAO = new ContactCompleteActionDAO();
+
+	public String execute() throws SQLException{
+
+	}
+
+}
