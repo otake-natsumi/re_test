@@ -47,8 +47,10 @@
 			margin: 10px;
 			object-fit: cover;
 			display:flex;
+			display: inline;
 			justify-contnt: space-between;
 			border: 1px solid #000;
+
 		}
  	</style>
 
@@ -56,18 +58,28 @@
 <body>
 	<div id="main">
 		<div class="left">
-			<h4>- illust -</h4>
 			<div id="illust">
-				<img src ="illust/Fairy tale - the little mermaid -.jpg" alt="Fairy tale - the little mermaid -">
+				<h4>- illust -</h4>
+					<h3>illust</h3>
+						<img src ="illust/grow into one.jpg" alt="grow into one">
 
+					<h3>Fairy tale</h3>
+						<img src ="illust/Fairy tale - the little mermaid -.jpg" alt="Fairy tale - the little mermaid -">
+						<img src ="illust/Fairy tale - sleeping beauty -.jpg" alt="Fairy tale - sleeping beauty -">
+						<img src ="illust/Fairy tale - tangled -.jpg" alt="Fairy tale - tangled -">
+						<img src ="illust/Fairy tale - cinderella -.jpg" alt="Fairy tale - cinderella -">
+
+					<h3>other</h3>
+						<img src ="illust/朝顔 手ぬぐい 青.jpg" alt="朝顔 手ぬぐい 青">
+						<img src ="illust/朝顔 手ぬぐい 赤.jpg" alt="朝顔 手ぬぐい 赤">
+						<img src ="illust/馬.jpg" alt="馬　練習">
 			</div>
-
 		</div>
+
 		<div class="right">
 
 		</div>
 	</div>
-
 <jsp:include page="footer.jsp" flush="true" />
 
 </body>
