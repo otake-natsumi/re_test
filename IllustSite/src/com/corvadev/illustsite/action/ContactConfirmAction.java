@@ -1,7 +1,10 @@
 package com.corvadev.illustsite.action;
-	import java.util.Map;
-	import org.apache.struts2.interceptor.SessionAware;
-	import com.opensymphony.xwork2.ActionSupport;
+
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.opensymphony.xwork2.ActionSupport;
 public class ContactConfirmAction extends ActionSupport implements SessionAware{
 
 	private String nick_name;

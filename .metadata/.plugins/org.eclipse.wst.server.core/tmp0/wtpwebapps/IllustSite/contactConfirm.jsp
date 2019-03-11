@@ -45,7 +45,7 @@
 </div>
 
 <div id="main">
-	<s:form action="ContactComplete">
+	<s:form action="ContactCompleteAction">
 	<table>
 		<tr>
 			<td>ニックネーム　</td>

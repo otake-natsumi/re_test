@@ -21,7 +21,12 @@
 
 	<!-- ContactCompleteAction -->
 		<action name="ContactCompleteAction" class="com.corvadev.illustsite.action.ContactCompleteAction" method="execute">
-			<result name="success">ContactComplete.jsp</result>
+			<result name="success">contactConfirm.jsp</result>
+		</action>
+
+	<!-- IllustAction -->
+		<action name="IllustAction" class="com.corvadev.illustsite.action.IllustAction" method="execute">
+			<result name="success">illust.jsp</result>
 		</action>
 
 	</package>

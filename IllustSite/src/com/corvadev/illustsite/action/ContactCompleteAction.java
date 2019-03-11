@@ -5,7 +5,7 @@ import java.util.Map;
 
 import org.apache.struts2.interceptor.SessionAware;
 
-import com.corvadev.illustsite.dao.ContactCompleteActionDAO;
+import com.corvadev.illustsite.dao.ContactCompleteDAO;
 import com.opensymphony.xwork2.ActionSupport;
 
 public class ContactCompleteAction extends ActionSupport implements SessionAware{
@@ -13,11 +13,11 @@ public class ContactCompleteAction extends ActionSupport implements SessionAware
 	private String nick_name;
 	private String comment;
 	public Map<String, Object> session;
-	private ContactCompleteActionDAO contactCompleteActionDAO = new ContactCompleteActionDAO();
+	private ContactCompleteDAO contactCompleteDAO = new ContactCompleteDAO();
 
 	public String execute() throws SQLException{
-		contactCompleteActionDAO.createComment(session.get("nick_name").toString(),
-											   session.get("comment").toString());
+		contactCompleteDAO.createComment(session.get("nick_name").toString(),
+										 session.get("comment").toString());
 
 		String result = SUCCESS;
 		return result;
