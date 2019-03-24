@@ -1,0 +1,14 @@
+package com.corvadev.illustsite.dao;
+
+import java.util.Map;
+
+public class IllustDTO{
+
+	private String title;
+	private String jpg;
+	public Map<String,Object> session;
+
+	public String execute(){
+		String result = SUCCESS;
+	}
+}

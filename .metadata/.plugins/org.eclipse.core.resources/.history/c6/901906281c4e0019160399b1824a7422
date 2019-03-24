@@ -1,0 +1,34 @@
+package com.corvadev.illustsite.action;
+
+import java.util.Map;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class IllustOpenAction extends ActionSupport{
+
+	private String title;
+	private String jpg;
+	private Map<String, Object> session;
+
+	public String getTitle(){
+		return title;
+	}
+	public void setTitle(String title){
+		this.title = title;
+	}
+
+	public String getJpg(){
+		return jpg;
+	}
+	public void setJpg(String jpg){
+		this.jpg = jpg;
+	}
+
+	public Map<String, Object> getSession(){
+		return session;
+	}
+	public void setSession(Map<String, Object> session){
+		this.session = session;
+	}
+
+}

@@ -1,0 +1,49 @@
+package com.corvadev.illustsite.dto;
+
+import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.internousdev.sampleweb.dto.ProductInfoDTO;
+import com.internousdev.sampleweb.util.DBConnector;
+
+public class ProductInfoDAO {
+
+	public List<ProductInfoDTO> getProductInfoList() {
+		DBConnector dbConnector = new DBConnector();
+		Connection connection = dbConnector.getConnection();
+		List<ProductInfoDTO> productInfoDTOList = new ArrayList<ProductInfoDTO>();
+		String sql = "select * from product_info";
+
+		try {
+			PreparedStatement preparedStatement = connection.prepareStatement(sql);
+			ResultSet resultSet = preparedStatement.executeQuery();
+			while (resultSet.next()) {
+				ProductInfoDTO productInfoDTO = new ProductInfoDTO();
+				productInfoDTO.setId(resultSet.getInt("id"));
+				productInfoDTO.setProductId(resultSet.getInt("product_id"));
+				productInfoDTO.setProductName(resultSet.getString("product_name"));
+				productInfoDTO.setProductNameKana(resultSet.getString("product_name_kana"));
+				productInfoDTO.setProductDescription(resultSet.getString("product_description"));
+				productInfoDTO.setCategoryId(resultSet.getInt("category_id"));
+				productInfoDTO.setPrice(resultSet.getInt("price"));
+				productInfoDTO.setImageFilePath(resultSet.getString("image_file_path"));
+				productInfoDTO.setImageFileName(resultSet.getString("image_file_name"));
+				productInfoDTO.setReleaseDate(resultSet.getDate("release_date"));
+				productInfoDTO.setReleaseCompany(resultSet.getString("release_company"));
+				productInfoDTOList.add(productInfoDTO);
+			}
+		} catch (SQLException e) {
+			e.printStackTrace();
+		}finally {
+			try {
+				connection.close();
+			} catch (SQLException e) {
+				e.printStackTrace();
+			}
+		}
+		return productInfoDTOList;
+	}

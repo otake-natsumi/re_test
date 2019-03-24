@@ -3,7 +3,7 @@
 <!DOCTYPE html>
 <html>
 
-<jsp:include page="header.jsp" flush="true" />
+<jsp:include page="header.jsp" flush="true"/>
 
 
 <head>

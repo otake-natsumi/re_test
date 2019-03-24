@@ -1,0 +1,20 @@
+package com.corvadev.illustsite.action;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.corvadev.illustsite.dao.IllustDTO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class IllustOpen extends ActionSupport{
+
+	private String title;
+	private String jpg;
+	private Map<String, Object> session;
+
+
+}

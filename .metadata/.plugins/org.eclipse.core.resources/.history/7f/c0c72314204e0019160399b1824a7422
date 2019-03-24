@@ -1,0 +1,5 @@
+package com.corvadev.illustsite.dto;
+
+public class IllustDTO {
+
+}

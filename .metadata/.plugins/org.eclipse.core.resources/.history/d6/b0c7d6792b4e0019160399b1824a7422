@@ -1,0 +1,25 @@
+set names utf8;
+set foreign_key_checks = 0;
+drop database if exists comment;
+
+create database if not exists comment;
+use comment;
+
+drop table if exists comment_list;
+
+create table comment_list(
+	nick_name varchar(16),
+	comment varchar(255),
+	update_date datetime
+);
+
+INSERT INTO comment_list(nick_name,comment) VALUES("nick_name","comment");
+
+drop table if exists illust_info;
+
+create table illust_info(
+	jpg varchar(16),
+	title varchar(255),
+);
+
+INSERT INTO illust_info(jpg,title) VALUES("JPG","title");

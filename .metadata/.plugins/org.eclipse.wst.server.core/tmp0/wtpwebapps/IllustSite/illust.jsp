@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html>
 
-<jsp:include page="header.jsp" flush="true" />
+<jsp:include page="header.jsp" flush="true"/>
 
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -12,7 +12,7 @@
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
 	<meta http-equiv="imagetoolbar" content="no" />
 
- 	<title>illust画面</title>
+ 	<title>イラスト一覧</title>
 
  	<style type="text/css">
  	 	/* ==========MAIN LAYOUT========== */
@@ -21,6 +21,14 @@
  	 		height: 0 auto;
  	 		text-align: center;
  	 		}
+
+		table{
+			display: inline-block;
+			float: left;
+			font-family: MS PMincho;
+			font-size: 28px;
+			padding-right: 150px;
+		}
 
 		.left{
 			float: left;
@@ -35,17 +43,13 @@
 			float: right;
 			width: 75%;
 			height: 1000px;
-			background: blue;
+			background: skyblue;
 			display: inline-block;
 			margin: auto 0;
 			text-align: center;
 		}
 
-		h4{
-			font-family: MS PMincho;
-			font-size: 28px;
-			padding-right: 150px;
-		}
+
 
 		#illust img{
 			width: 80px;
@@ -75,32 +79,66 @@
 	<div id="main">
 		<div class="left">
 			<div id="illust">
-				<h4>- illust -</h4>
+			<table>
+
+				<tr>
+					<th>
 					<h3>illust</h3>
-							<img src ="illust/grow into one.jpg" alt="grow into one" onClick="">
-
-
+						<img src ="illust/grow into one.jpg" alt="grow into one" onClick="">
+					<th>
+				</tr>
+				<tr>
+					<th>
 					<h3>Fairy tale</h3>
 						<img src ="illust/Fairy tale - sleeping beauty - .jpg" alt="Fairy tale - sleeping beauty -">
-
+					</th>
+				</tr>
+				<tr>
+					<th>
 					<h3>other</h3>
-						<img src ="illust/朝顔 手ぬぐい 青.jpg" alt="朝顔 手ぬぐい 青">
-						<img src ="illust/朝顔 手ぬぐい 赤.jpg" alt="朝顔 手ぬぐい 赤">
+					<s:form action="IllustOpenAction">
+						<input type="image" src ="illust/朝顔 手ぬぐい 青.jpg" alt="朝顔 手ぬぐい 青" id="img"<s:property value="title" />>
+						<input type="image" src ="illust/朝顔 手ぬぐい 赤.jpg" alt="朝顔 手ぬぐい 赤" id="img"<s:property value="title" />>
+						<input type="image" src="illust/馬.jpg" alt="馬　練習" id="img"<s:property value="title" />>
 
-					<s:form action="IllustAction">
-						<input type="image" src="illust/馬.jpg" alt="馬　練習" id="img">
+						<a href='"illust/馬.jpg" <s:url action = "IllustOpenAction" />'><img src="illust/馬.jpg" alt="馬　練習"></a>
+
+						<a href="illustOpen.jsp" ><img src="illust/馬.jpg" alt="馬　練習" name="title"></a>
+
 					</s:form>
+					</th>
+				</tr>
+
+			</table>
 			</div>
 		</div>
 
-		<div class="right">
+<div id="contents">
 
-			<s:if test="IllustAction == null">
+<s:if test="!illustDTOList.isEmpty()">
+<!-- <div id="product-list"> -->
+<%-- <s:iterator value="IllustDTOList"> --%>
+	<!-- <div class="product-list-box"> -->
+	<!-- <ul> -->
+	<!-- 	<li> -->
+	<%-- 	<a href='<s:url action="ProductDetailsAction"> --%>
+	<!-- <!-- 	<s:param name="productId" value="%{productId}"/> --> -->
+	<%-- 	</s:url>'><img src='<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>' class="item-image-box-200"/></a><br> --%>
+	<%-- 	<s:property value="productName"/><br> --%>
+	<!--   </li> -->
+	<!-- </ul> -->
+	<!-- </div> -->
+<%-- </s:iterator> --%>
+<!-- </div> -->
+</s:if>
 
-			</s:if>
+	<div class="right">
+		<s:if test="!IllustDTO.isEmpty()">
+			<jsp:include page="illustOpen.jsp" flush="true"  />
+		</s:if>
 
-		</div>
-
+	</div>
+</div>
 	</div>
 
 <jsp:include page="footer.jsp" flush="true" />

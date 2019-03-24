@@ -1,0 +1,36 @@
+package com.corvadev.illustsite.action;
+
+import java.util.List;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.corvadev.illustsite.dao.IllustDAO;
+import com.corvadev.illustsite.dto.IllustDTO;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class IllustAction extends ActionSupport implements SessionAware{
+	private List<IllustDTO> illustDTOInfoList;
+	private Map<String, Object> session;
+
+	public String execute(){
+
+			IllustDAO illustDAO = new IllustDAO();
+			illustInfoDTOList = illustInfoDAO.getIllustInfoList();
+
+			return SUCCESS;
+			}
+
+			public List<IllustInfoDTO> getIllustInfoDTOList() {
+				return illustInfoDTOList;
+			}
+			public void setIllustInfoDTOList(List<IllustInfoDTO> illustInfoDTOList) {
+				this.illustInfoDTOList = illustInfoDTOList;
+			}
+			public Map<String, Object> getSession() {
+				return session;
+			}
+			public void setSession(Map<String, Object> session) {
+				this.session = session;
+			}
+	}

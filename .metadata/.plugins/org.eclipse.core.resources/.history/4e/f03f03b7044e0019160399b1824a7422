@@ -1,0 +1,56 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Syle-Type" content="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="imagetoolbar" content="no" />
+
+<title>イラスト詳細</title>
+</head>
+<body>
+
+
+	<s:iterator value="relatedProductList">
+				<div class="recommend-box">
+				<a href='<s:url action="ProductDetailsAction">
+				<s:param name="productId" value="%{productId}"/>
+				</s:url>'><img src='<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>' class="item-image-box-100"/></a>
+				<s:property value="productName"/><br>
+				</div>
+	</s:iterator>
+
+	<div class="error">
+	<div class="error-message">
+		<s:iterator value="keywordsErrorMessageList"><s:property /><br></s:iterator>
+	</div>
+	</div>
+<s:elseif test="!productInfoDTOList.isEmpty()">
+<div id="product-list">
+	<s:iterator value="productInfoDTOList">
+	<div class="product-list-box">
+	<ul>
+		<li>
+		<a href='<s:url action="ProductDetailsAction">
+		<s:param name="productId" value="%{productId}"/>
+		</s:url>'><img src='<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>' class="item-image-box-200"/></a><br>
+		<s:property value="productName"/><br>
+		<s:property value="productNameKana"/><br>
+		<s:property value="price"/>円<br>
+	  </li>
+	</ul>
+	</div>
+	</s:iterator>
+</div>
+</s:elseif>
+<s:else>
+<div class="info">
+検索結果がありません。
+</div>
+</s:else>
+
+</body>
+</html>
