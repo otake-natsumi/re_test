@@ -1,0 +1,27 @@
+package com.corvadev.illustsite.dao;
+import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.List;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+
+import com.corvadev.illustsite.dto.IllustDTO;
+import com.corvadev.illustsite.util.DBConnector;
+
+public class IllustDAO {
+	public List<IllustDTO> getIllustDTO(){
+		DBConnector dbConnector = new DBConnector();
+		Connection connection = dbConnector.getConnection();
+		List<IllustDTO>illustDTOList = new ArrayList<IllusDTO>();
+
+		try {
+			PreparedStatement preparedStatement = connection.prepareStatement(sql);
+			ResultSet resultSet = preparedStatement.executeQuery();
+			while (resultSet.next()) {
+				IllustDTO illustDTO = new IllustDTO();
+				IllustDTO.setTitle(resultSet.getInt("title"));
+				IllustDTO.setIllustName(resultSet.getInt("illustName");
+			}
+	}
+	}}

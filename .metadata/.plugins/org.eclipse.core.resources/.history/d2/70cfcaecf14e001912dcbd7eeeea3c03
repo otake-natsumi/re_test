@@ -1,0 +1,27 @@
+package com.corvadev.illustsite.action;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class IllustOpenAction extends ActionSupport{
+	int flag;
+	public String execute() {
+		flag = 1;
+		return SUCCESS;
+	}
+	public int getFlag() {
+		return flag;
+	}
+	public void setFlag(int flag) {
+		this.flag = flag;
+	}
+
+
+	private String title;
+
+	public String getTitle(){
+		return title;
+	}
+	public void setTltle(String title){
+		this.title =  title;
+	}
+}

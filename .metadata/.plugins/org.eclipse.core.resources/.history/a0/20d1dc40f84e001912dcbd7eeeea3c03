@@ -1,0 +1,40 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" session="false" %>
+<%@ taglib prefix="s" uri="/struts-tags"  %>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<meta http-equiv="Content-Syle-Type" content="text/css" />
+	<meta http-equiv="Content-Script-Type" content="text/javascript" />
+	<meta http-equiv="imagetoolbar" content="no" />
+
+ 	<title>イラスト一覧</title>
+
+ 	<style type="text/css">
+
+ 	</style>
+</head>
+<body>
+<div>
+	<h1>イラスト</h1>
+
+<%-- <s:iterator value="illustDTOList"> --%>
+<!-- 	<div class="recommend-box"> -->
+<%-- 		<a href='<s:url action="IllustOpenAction"> --%>
+<!-- 		<s:param name="title" value="%{title}"/> -->
+<%-- 		</s:url>'><img src='<s:property value="illustName"/>'/></a> --%>
+<%-- 		<s:property value="title"/><br> --%>
+<!-- 	</div> -->
+<%-- </s:iterator> --%>
+
+<%-- 	<s:form action="IllustAction"> --%>
+<%-- 		<s:if test="!IllustAction.isEmpty()"> --%>
+<%-- 			<jsp:include page="illust.jsp"/> --%>
+<%-- 		</s:if> --%>
+<%-- 		<s:property value="session.title" /> --%>
+<%-- 	</s:form> --%>
+</div>
+</body>
+</html>

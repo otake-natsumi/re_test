@@ -1,0 +1,24 @@
+package com.corvadev.illustsite.dto;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class IllustDTO extends ActionSupport{
+
+		private String title;
+		private String illustName;
+
+		public String getTitle(){
+			return title;
+		}
+		public void setTltle(String title){
+			this.title =  title;
+		}
+
+		public String getIllustName(){
+			return illustName;
+		}
+		public void setIllustName(String illustName){
+			this.title = illustName;
+		}
+
+}

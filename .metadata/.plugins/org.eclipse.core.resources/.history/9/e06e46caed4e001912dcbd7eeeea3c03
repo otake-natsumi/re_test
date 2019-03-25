@@ -1,0 +1,18 @@
+package com.corvadev.illustsite.action;
+
+import com.opensymphony.xwork2.ActionSupport;
+import org.apache.struts2.interceptor.SessionAware;
+
+public class IllustOpenAction extends ActionSupport implements SessionAware {
+	int flag;
+	public String execute() {
+		flag = 1;
+		return SUCCESS;
+	}
+	public int getFlag() {
+		return flag;
+	}
+	public void setFlag(int flag) {
+		this.flag = flag;
+	}
+}

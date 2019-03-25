@@ -1,0 +1,17 @@
+package com.corvadev.illustsite.dao;
+import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.List;
+
+import com.corvadev.illustsite.dto.IllustDTO;
+import com.corvadev.illustsite.util.DBConnector;
+
+public class IllustDAO {
+	public List<IllustDTO> getIllustDTO(){
+		DBConnector dbConnector = new DBConnector();
+		Connection connection = dbConnector.getConnection();
+		List<IllustDTO>iIllustDTOList = new ArrayList<IllusDTO>();
+
+
+	}
+}

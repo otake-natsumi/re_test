@@ -7,7 +7,7 @@ import java.sql.SQLException;
 import com.corvadev.illustsite.util.DBConnector;
 import com.corvadev.illustsite.util.DateUtil;
 ;
-public class ContactCompleteDAO {
+public class ContactCompleteDAO{
 	private DBConnector dbConnector = new DBConnector();
 	private Connection connection = dbConnector.getConnection();
 	private DateUtil dateUtil = new DateUtil();

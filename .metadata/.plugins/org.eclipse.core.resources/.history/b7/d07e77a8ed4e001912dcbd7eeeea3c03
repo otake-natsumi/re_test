@@ -1,0 +1,58 @@
+package com.corvadev.illustsite.dto;
+
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Iterator;
+import java.util.List;
+import java.util.Set;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class IllustDTO extends ActionSupport{
+
+	  public static void main(String[] args) {
+	    // リストを作成する
+	    List list = new ArrayList();
+	    list.add("alpha");
+	    list.add("bravo");
+	    list.add("charlie");
+
+	    // イテレータを取得し、メソッドを呼び出す
+	    printIterable(list.iterator());
+
+	    System.out.println("-----");
+
+	    // セットを作成する
+	    Set set = new HashSet();
+	    set.add("title");
+	    set.add("jpg");
+
+	    // イテレータを取得し、メソッドを呼び出す
+	    printIterable(set.iterator());
+	  }
+
+	  private static void printIterable(Iterator iterator) {
+	    while (iterator.hasNext()) {
+	      String s = iterator.next();
+	      System.out.println(s);
+	    }
+	  }
+
+	private String title;
+	private String jpg;
+
+	public String getTitle(){
+		return title;
+	}
+	public void setTitle(String title){
+		this.title = title;
+	}
+
+	public String getJpg(){
+		return jpg;
+	}
+	public void setJpg(String jpg){
+		this.jpg = jpg;
+	}
+
+}

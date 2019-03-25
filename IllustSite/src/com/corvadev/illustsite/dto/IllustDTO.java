@@ -1,58 +1,22 @@
 package com.corvadev.illustsite.dto;
 
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Set;
+public class IllustDTO{
 
-import com.opensymphony.xwork2.ActionSupport;
+		private String title;
+		private String illustName;
 
-public class IllustDTO extends ActionSupport{
+		public String getTitle(){
+			return title;
+		}
+		public void setTltle(String title){
+			this.title =  title;
+		}
 
-	  public static void main(String[] args) {
-	    // リストを作成する
-	    List list = new ArrayList();
-	    list.add("alpha");
-	    list.add("bravo");
-	    list.add("charlie");
-
-	    // イテレータを取得し、メソッドを呼び出す
-	    printIterable(list.iterator());
-
-	    System.out.println("-----");
-
-	    // セットを作成する
-	    Set set = new HashSet();
-	    set.add("title");
-	    set.add("jpg");
-
-	    // イテレータを取得し、メソッドを呼び出す
-	    printIterable(set.iterator());
-	  }
-
-	  private static void printIterable(Iterator iterator) {
-	    while (iterator.hasNext()) {
-	      String s = iterator.next();
-	      System.out.println(s);
-	    }
-	  }
-
-	private String title;
-	private String jpg;
-
-	public String getTitle(){
-		return title;
-	}
-	public void setTitle(String title){
-		this.title = title;
-	}
-
-	public String getJpg(){
-		return jpg;
-	}
-	public void setJpg(String jpg){
-		this.jpg = jpg;
-	}
+		public String getIllustName(){
+			return illustName;
+		}
+		public void setIllustName(String illustName){
+			this.title = illustName;
+		}
 
 }

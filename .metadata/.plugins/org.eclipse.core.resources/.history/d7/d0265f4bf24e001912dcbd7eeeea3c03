@@ -1,0 +1,46 @@
+package com.corvadev.illustsite.action;
+
+import org.apache.struts2.interceptor.SessionAware;
+import java.util.Map;
+import com.opensymphony.xwork2.ActionSupport;
+
+public class IllustOpenAction extends ActionSupport implements SessionAware {
+	int flag;
+	public String execute() {
+		flag = 1;
+		return SUCCESS;
+	}
+	public int getFlag() {
+		return flag;
+	}
+	public void setFlag(int flag) {
+		this.flag = flag;
+	}
+
+
+	private String title;
+	private String illustName;
+	private Map<String, Object> session;
+
+	public String getTitle(){
+		return title;
+	}
+	public void setTltle(String title){
+		this.title =  title;
+	}
+
+	public String getIllustName(){
+		return illustName;
+	}
+	public void setIllustName(String illustName){
+		this.title = illustName;
+	}
+
+	public Map<String, Object> getSession(){
+		return session;
+	}
+	public void setSession(Map<String, Object> session){
+		this.title = session;
+	}
+
+}

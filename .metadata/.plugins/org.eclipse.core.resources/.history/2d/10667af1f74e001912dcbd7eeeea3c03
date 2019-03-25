@@ -1,0 +1,10 @@
+package com.corvadev.illustsite.dao;
+
+import com.corvadev.illustsite.dto.IllustDTO;
+import com.corvadev.illustsite.util.DBConnector;
+
+public class IllustDAO {
+	public List<IllustDTO> getIllustDTO(){
+
+	}
+}

@@ -1,0 +1,9 @@
+package com.corvadev.illustsite.dao;
+
+import com.corvadev.illustsite.dto.IllustDTO;
+
+public class IllustDAO {
+	public List<IllustDTO> getIllustDTO(){
+
+	}
+}

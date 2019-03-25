@@ -1,0 +1,17 @@
+package com.corvadev.illustsite.action;
+
+import java.util.List;
+import java.util.Map;
+import com.opensymphony.xwork2.ActionSupport;
+
+import com.corvadev.illustsite.dao.IllustDTO;
+
+public class IllustAction extends ActionSupport{
+
+	public String execute(){
+
+			return SUCCESS;
+			}
+
+
+	}
