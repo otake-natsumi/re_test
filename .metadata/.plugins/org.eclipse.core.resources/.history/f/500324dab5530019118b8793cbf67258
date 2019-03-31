@@ -1,0 +1,185 @@
+package com.corvadev.illustsite.action;
+
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class IllustOpenAction extends ActionSupport implements SessionAware {
+	int flag;
+	public String execute() {
+		flag = 1;
+		return SUCCESS;
+	}
+	public int getFlag() {
+		return flag;
+	}
+	public void setFlag(int flag) {
+		this.flag = flag;
+	}
+
+
+	private String title;
+	private String illustName;
+	private Map<String, Object> session;
+
+	public String getTitle(){
+		return title;
+	}
+	public void setTltle(String title){
+		this.title =  title;
+	}
+
+	public String getIllustName(){
+		return illustName;
+	}
+	public void setIllustName(String illustName){
+		this.title = illustName;
+	}
+
+	public Map<String, Object> getSession(){
+		return session;
+	}
+	public void setSession(Map<String, Object> session){
+		this.session = session;
+	}
+
+}
+
+
+package com.corvadev.illustsite.action;
+
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.opensymphony.xwork2.ActionSupport;
+
+public class IllustOpenAction extends ActionSupport implements SessionAware {
+	int flag;
+	public String execute() {
+		flag = 1;
+		return SUCCESS;
+	}
+	public int getFlag() {
+		return flag;
+	}
+	public void setFlag(int flag) {
+		this.flag = flag;
+	}
+
+
+package com.internousdev.sampleweb.action;
+
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.struts2.interceptor.SessionAware;
+
+import com.internousdev.sampleweb.dao.ProductInfoDAO;
+import com.internousdev.sampleweb.dto.ProductInfoDTO;
+import com.opensymphony.xwork2.ActionSupport;
+
+
+public class IllustOpenAction extends ActionSupport implements SessionAware{
+
+	private int illustId;
+	private String illustName;
+	private String illustDescribe;
+	private String imageFilePath;
+	private String imageFileName;
+	private int price;
+	private String releaseCompany;
+	private Date releaseDate;
+	private String productDescription;
+	private List<Integer> productCountList;
+	private List<ProductInfoDTO> relatedProductList;
+	private Map<String, Object> session;
+
+	public String execute() {
+		//sessionがタイムアウトのチェック
+		if(!session.containsKey("mCategoryDTOList")) {
+			return "sessionTimeout";
+		}
+
+		// 商品情報を取得
+		ProductInfoDAO productInfoDAO = new ProductInfoDAO();
+		ProductInfoDTO productInfoDTO = new ProductInfoDTO();
+		productInfoDTO = productInfoDAO.getProductInfo(illustId);
+
+		illustId = productInfoDTO.getIllustId();
+		illustName = productInfoDTO.getIllustName();
+		illustDescribe = productInfoDTO.getIllustDescribe();
+		imageFilePath = productInfoDTO.getImageFilePath();
+		imageFileName = productInfoDTO.getImageFileName();
+
+	}
+
+	public int getIllustId() {
+		return illustId;
+	}
+	public void setIllustId(int illustId) {
+		this.illustId = illustId;
+	}
+
+	public String getIllustName() {
+		return illustName;
+	}
+
+	public void setIllustName(String illustName) {
+		this.illustName = illustName;
+	}
+
+	public String getIllustDescribe() {
+		return illustDescribe;
+	}
+
+	public void setIllustDescribe(String illustDescribe) {
+		this.illustDescribe = illustDescribe;
+	}
+
+	public String getImageFilePath() {
+		return imageFilePath;
+	}
+
+	public void setImageFilePath(String imageFilePath) {
+		this.imageFilePath = imageFilePath;
+	}
+
+	public String getImageFileName() {
+		return imageFileName;
+	}
+
+	public void setImageFileName(String imageFileName) {
+		this.imageFileName = imageFileName;
+	}
+
+
+
+
+	public List<Integer> getProductCountList() {
+		return productCountList;
+	}
+
+	public void setProductCountList(List<Integer> productCountList) {
+		this.productCountList = productCountList;
+	}
+
+	public List<ProductInfoDTO> getRelatedProductList() {
+		return relatedProductList;
+	}
+
+	public void setRelatedProductList(List<ProductInfoDTO> relatedProductList) {
+		this.relatedProductList = relatedProductList;
+	}
+
+	public Map<String, Object> getSession() {
+		return session;
+	}
+	public void setSession(Map<String, Object> session) {
+		this.session = session;
+	}
+}

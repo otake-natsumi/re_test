@@ -85,7 +85,6 @@
 					<th>
 					<h3>illust</h3>
 						<a href='<s:url action="IllustOpenAction"></s:url>'><img src='illust/grow into one.jpg' alt='grow into one' /></a>
-					<th>
 				</tr>
 				<tr>
 					<th>
@@ -99,6 +98,20 @@
 						<a href='<s:url action="IllustOpenAction"></s:url>'><img src='illust/朝顔 手ぬぐい 青.jpg' alt='朝顔 手ぬぐい 青' /></a>
 						<a href='<s:url action="IllustOpenAction"></s:url>'><img src='illust/朝顔 手ぬぐい 赤.jpg' alt='朝顔 手ぬぐい 赤' /></a>
 						<a href='<s:url action="IllustOpenAction"><s:param name="title" value="%{title}"/></s:url>'><img src='illust/馬.jpg' alt='馬 練習' /><s:property value="illustName"/></a>
+
+
+						<a href='<s:url action="IllustOpenAction">
+						<s:param name="illustId" value="%{illustId}"/>
+						</s:url>'><img src='<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>' class="illust"/></a><br>
+						<s:property value="illustName"/><br>
+						<s:property value="illustDescribe"/><br>
+
+
+<%-- 						<a href='<s:url action="ProductDetailsAction"> --%>
+<!-- 						<s:param name="productId" value="%{productId}"/> -->
+<%-- 						</s:url>'><img src='<s:property value="vvv"/>/<s:property value="imageFileName"/>' class="illust"/></a><br> --%>
+<%-- 						<s:property value="productName"/><br> --%>
+<%-- 						<s:property value="productNameKana"/><br> --%>
 					</th>
 				</tr>
 

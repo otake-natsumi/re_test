@@ -1,0 +1,22 @@
+package com.corvadev.illustsite.dto;
+
+public class IllustInfoDTO{
+
+		private String illustName;
+		private String illustDescribe;
+
+		public String getIllustName(){
+			return illustName;
+		}
+		public void setIllustName(String illustName){
+			this.illustName =  illustName;
+		}
+
+		public String getIllustDescribe(){
+			return illustDescribe;
+		}
+		public void setIillustDescribe(String illustDescribe){
+			this.illustDescribe = illustDescribe;
+		}
+
+}
