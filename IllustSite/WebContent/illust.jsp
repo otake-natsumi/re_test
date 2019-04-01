@@ -1,20 +1,17 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" session="false" %>
 <%@ taglib prefix="s" uri="/struts-tags"  %>
-
 <!DOCTYPE html>
 <html>
-
-<jsp:include page="header.jsp" flush="true"/>
-
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta http-equiv="Content-Syle-Type" content="text/css" />
 	<meta http-equiv="Content-Script-Type" content="text/javascript" />
 	<meta http-equiv="imagetoolbar" content="no" />
 
- 	<title>イラスト一覧</title>
+ 	<title>top画面</title>
 
  	<style type="text/css">
+
  	 	/* ==========MAIN LAYOUT========== */
  	 	#main{
  	 		whidth: 100%;
@@ -71,11 +68,11 @@
 			justify-contnt: space-between;
 			border: 1px solid #000;
 		}
-
  	</style>
 
 </head>
 <body>
+<jsp:include page = "header.jsp" />
 	<div id="main">
 		<div class="left">
 			<div id="illust">
@@ -100,18 +97,18 @@
 						<a href='<s:url action="IllustOpenAction"><s:param name="title" value="%{title}"/></s:url>'><img src='illust/馬.jpg' alt='馬 練習' /><s:property value="illustName"/></a>
 
 
-						<a href='<s:url action="IllustOpenAction">
-						<s:param name="illustId" value="%{illustId}"/>
-						</s:url>'><img src='<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>' class="illust"/></a><br>
+						<a href='<s:url action="IllustOpenAction"><s:param name="illustId" value="%{illustId}"/></s:url>'>
+						<img src='"illust/馬.jpg"<s:property value="imageFilePath"/><s:property value="imageFileName"/>' class="illust"/></a><br>
 						<s:property value="illustName"/><br>
 						<s:property value="illustDescribe"/><br>
 
 
-<%-- 						<a href='<s:url action="ProductDetailsAction"> --%>
+						<a href='<s:url action="ProductDetailsAction">
 <!-- 						<s:param name="productId" value="%{productId}"/> -->
-<%-- 						</s:url>'><img src='<s:property value="vvv"/>/<s:property value="imageFileName"/>' class="illust"/></a><br> --%>
-<%-- 						<s:property value="productName"/><br> --%>
-<%-- 						<s:property value="productNameKana"/><br> --%>
+						</s:url>'><img src='<s:property value="vvv"/>/<s:property value="imageFileName"/>' class="illust"/></a><br>
+						<s:property value="productName"/><br>
+						<s:property value="productNameKana"/><br>
+
 					</th>
 				</tr>
 
@@ -123,38 +120,39 @@
 
 <s:if test="!illustDTOList.isEmpty()">
 
-<!-- <div id="product-list"> -->
-<%-- <s:iterator value="illustDTOList"> --%>
-<!-- 	<div class="AAA"> -->
-<%-- 		<a href='<s:url action="IllustOpenAction"> --%>
+<div id="product-list">
+<s:iterator value="illustDTOList">
+	<div class="AAA">
+	test1
+		<a href='<s:url action="IllustOpenAction">
 <!-- 		<s:param name="title" value="%{title}"/> -->
-<%-- 		</s:url>'><img src='<s:property value="illustName"/>'/></a> --%>
-<%-- 		<s:property value="title"/><br> --%>
-<!-- 	</div> -->
-<%-- </s:iterator> --%>
+		</s:url>'><img src='<s:property value="illustName"/>'/></a>
+		<s:property value="title"/><br>
+	</div>
+</s:iterator>
 
-<%-- <s:iterator value="IllustDTOList"> --%>
-<!-- 	<div class="product-list-box"> -->
-<%-- 		<a href='<s:url action="ProductDetailsAction"> --%>
+<s:iterator value="IllustDTOList">
+	<div class="product-list-box">
+		test2
+		<a href='<s:url action="ProductDetailsAction">
 <!-- 		<s:param name="productId" value="%{productId}"/> -->
-<%-- 		</s:url>'><img src='<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>' class="item-image-box-200"/></a><br> --%>
-<%-- 		<s:property value="productName"/><br> --%>
-<!-- 	</div> -->
-<%-- </s:iterator> --%>
+		</s:url>'><img src='<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>' class="item-image-box-200"/></a><br>
+		<s:property value="productName"/><br>
+	</div>
+</s:iterator>
 
-<!-- </div> -->
+</div>
 </s:if>
 
 	<div class="right">
 		<s:if test="flag == 1">
-			<jsp:include page="illustOpen.jsp" flush="true"  />
+			<jsp:include page="illustOpen.jsp"  />
 		</s:if>
 
 	</div>
 </div>
 	</div>
-
-<jsp:include page="footer.jsp" flush="true" />
+<jsp:include page="footer.jsp" />
 
 </body>
 </html>

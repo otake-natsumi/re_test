@@ -2,9 +2,6 @@
 
 <!DOCTYPE html>
 <html>
-
-<jsp:include page = "header.jsp" flush="true" />
-
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 	<meta http-equiv="Content-Syle-Type" content="text/css" />
@@ -53,6 +50,7 @@
 
 </head>
 <body>
+<jsp:include page = "header.jsp" />
 
 		<div id="main">
 			<h4>N.corvaのイラストサイトです。<br>
@@ -67,8 +65,9 @@
 				<li>色鉛筆　など</li>
 			</ul>
 		</div>
+test
 
-<jsp:include page="footer.jsp" flush="true" />
+<jsp:include page="footer.jsp" />
 
 </body>
 </html>

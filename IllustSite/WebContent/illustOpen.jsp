@@ -22,7 +22,7 @@
 
 
 
-<s:if test="!productName.isEmpty()">
+<s:if test="!illustName.isEmpty()">
 	<s:form action="AddCartAction" >
 	<div class="box">
 	<div class="2column-container">
@@ -50,7 +50,7 @@
 		<s:iterator value="Illust">
 				<div class="recommend-box">
 				<a href='<s:url action="illustOpenAction">
-				<s:param name="illustId" value="illustId"/>
+ 				<s:param name="illustId" value="illustId"/>
 				</s:url>'><img src='<s:property value="imageFilePath"/>/<s:property value="imageFileName"/>' class="illust"/></a>
 				<s:property value="illustName"/><br>
 				</div>
@@ -59,11 +59,6 @@
 	</div>
 
 </s:if>
-
-<%-- <s:if test="!illustName.isEmpty()"> --%>
-<%-- 	<s:property value="illustName"/> --%>
-<%-- </s:if> --%>
-
 </div>
 </body>
 </html>

@@ -15,7 +15,7 @@
 	 	body{
 	 		margin: 0;
 	 		letter-spacing:1.6;
-	 					text-align: center;
+	 		text-align: center;
 	 	}
 		#main{
 			padding-top: 50px;

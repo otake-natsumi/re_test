@@ -40,7 +40,7 @@
 </head>
 <body>
 
-<jsp:include page="header.jsp" flush="true" />
+<jsp:include page="header.jsp" />
 
 	<div id="main">
 	<h2>コメント</h2>
@@ -59,7 +59,7 @@
 		</div>
 	</div>
 
-<jsp:include page="footer.jsp" flush="true" />
+<jsp:include page="footer.jsp" />
 
 </body>
 </html>

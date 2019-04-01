@@ -11,6 +11,8 @@ import com.opensymphony.xwork2.ActionSupport;
 
 public class IllustOpenAction extends ActionSupport implements SessionAware{
 
+	private int flag;
+
 	private int illustId;
 	private String illustName;
 	private String illustDescribe;
@@ -20,23 +22,20 @@ public class IllustOpenAction extends ActionSupport implements SessionAware{
 	private List<IllustInfoDTO> relatedIllustList;
 	private Map<String, Object> session;
 
-//	public String execute() {
-//		//sessionがタイムアウトのチェック
-//		if(!session.containsKey("mCategoryDTOList")) {
-//			return "sessionTimeout";
-//		}
-//
-//		// 商品情報を取得
-//		IllustInfoDTO illustInfoDTO = new IllustInfoDTO();
-//
-//		illustId = illustInfoDTO.getIllustId();
-//		illustName = illustInfoDTO.getIllustName();
-//		illustDescribe = illustInfoDTO.getIllustDescribe();
-//		imageFilePath = illustInfoDTO.getImageFilePath();
-//		imageFileName = illustInfoDTO.getImageFileName();
+	public String exectute () {
+		flag = 1;
 
-//	return SUCCESS;
-//}
+		return SUCCESS;
+
+	}
+
+	public int getFlag() {
+		return flag;
+	}
+	public void setFlag(int flag) {
+		this.flag = flag;
+	}
+
 
 	public int getIllustId() {
 		return illustId;
